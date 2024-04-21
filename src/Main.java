@@ -3,6 +3,7 @@
 // CSC 1060
 
 // importing a bunch of shit
+
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.File;
@@ -42,11 +43,11 @@ public class Main {
         // try block for writing the receipt arraylist to the total.txt file
         try {
             FileWriter writer = new FileWriter("total.txt");
-            for (int i = 0; i < receipt.size(); i++){
+            for (int i = 0; i < receipt.size(); i++) {
                 writer.write(String.format("%.2f", receipt.get(i)) + "\n");
             }
             writer.close();
-        } catch (IOException e){
+        } catch (IOException e) {
             System.out.println("IO EXCEPTION");
         }
     }
